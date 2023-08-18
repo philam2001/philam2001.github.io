@@ -1,0 +1,13 @@
+#picme {
+    width: 300px;
+    height: auto;
+}
+
+.center-horizontal {
+    margin: 0 auto;
+}
+
+.center-vertical {
+    display: flex;
+    align-items: center;
+}
