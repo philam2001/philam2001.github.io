@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 import { useState, useEffect } from "react"
 import profilePic from "../assets/img/profile.jpg"
-import flipPic from "../assets/img/IMG_0000.jpg"
+import flipPic from "../assets/img/me.jpeg"
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -57,7 +57,7 @@ export const Banner = () => {
         <section className="banner" id="home" style={{ opacity: scrollOpacity }}>
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7} className="text-left">
+                    <Col xs={12} md={6} xl={6} className="text-left">
                         <div className="text-content">
                             <span className="tagline">Hello 🌎, I'm </span>
                             <h1>{`Phi Lam`}</h1>
@@ -66,7 +66,7 @@ export const Banner = () => {
                             <p></p>
                         </div>
                     </Col>
-                    <Col xs={12} md={6} xl={5} className="image-container" >
+                    <Col xs={12} md={6} xl={6} className="image-container" >
                         <div className="flip-container">
                             <div className="flipper">
                                 <img className="profile-pic front" src={profilePic} alt="Header Img" />

@@ -87,8 +87,15 @@ h6 {
   }
 }
 
+:root {
+  --navbar-spacing: 15px;
+  --gap-link-icons: 200px;
+  /* Initial spacing */
+}
+
 
 nav.navbar {
+  justify-content: space-between;
   padding: 18px 0;
   position: fixed;
   width: 100%;
@@ -105,16 +112,25 @@ nav.navbar.scrolled {
 }
 
 nav.navbar a.navbar-brand {
+  padding-top: 8px;
   /* font-size: 30px; */
   font-family: 'Vogue', sans-serif;
   color: white;
 }
 
+
+.navbar-nav .navbar-link:last-of-type {
+  margin-right: var(--gap-link-icons);
+}
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
-  padding: 0 25px;
+  padding: 0 var(--navbar-spacing);
+  transition: gap 0.1s ease-in-out;
   font-size: 18px;
   opacity: 0.65;
 }
@@ -127,6 +143,13 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
   display: flex;
   align-items: center;
+  padding: 0;
+}
+
+.social-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .social-icon a img {
@@ -141,7 +164,7 @@ span.navbar-text {
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
-  margin-right: 6px;
+  margin-right: 8px;
   align-items: center;
   justify-content: center;
   line-height: 1;
@@ -298,8 +321,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .flip-container {
-  margin-left: -150px;
-  /* position: relative; */
   width: 250px;
   height: 250px;
   perspective: 1000px;
@@ -401,5 +422,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 16px;
   display: inline-block;
 }
-
-} */
+ */

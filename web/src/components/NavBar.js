@@ -1,5 +1,4 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState, useEffect } from 'react';
 import gitIcon from '../assets/img/git.svg'
 import igIcon from '../assets/img/ig.svg'
@@ -8,6 +7,8 @@ import linkedInIcon from '../assets/img/linkedin.svg'
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const [navbarSpacing, setNavbarSpacing] = useState(15)
+    const [gapBetweenLinksAndIcons, setGapBetweenLinksAndIcons] = useState(200);
 
     useEffect(
         () => {
@@ -26,8 +27,40 @@ export const NavBar = () => {
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
+
+    const calculateDynamicSpacing = () => {
+        const screenWidth = window.innerWidth;
+        console.log("Current screen width:", screenWidth);
+
+        // Calculate dynamic gap between links and icons
+        const dynamicGap = screenWidth > 1150 ? (screenWidth - 1120) / 2 : Math.max(8, 15 - (1150 - screenWidth) / 30);
+        setGapBetweenLinksAndIcons(dynamicGap);
+
+        // Calculate navbar spacing based on screen width thresholds
+        if (screenWidth < 1150 && screenWidth > 800) {
+            setNavbarSpacing(Math.max(8, 15 - (1150 - screenWidth) / 30));
+        } else if (screenWidth <= 800) {
+            setNavbarSpacing(8); // Minimum threshold
+        } else {
+            setNavbarSpacing(15); // Default for large screens
+        }
+    };
+
+    useEffect(() => {
+        calculateDynamicSpacing(); // Set initial values on mount
+
+        window.addEventListener('resize', calculateDynamicSpacing); // Adjust on resize
+        return () => window.removeEventListener('resize', calculateDynamicSpacing); // Cleanup on unmount
+    }, []);
+
+    const navbarStyle = {
+        '--navbar-spacing': `${navbarSpacing}px`,
+        '--gap-link-icons': `${gapBetweenLinksAndIcons}px`
+    };
+
+
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Navbar expand="lg" className={scrolled ? "scrolled" : ""} style={navbarStyle}>
             <Container>
                 <Navbar.Brand href="#home">
                     Phi Lam
@@ -43,26 +76,16 @@ export const NavBar = () => {
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         <Nav.Link href="#food" className={activeLink === 'food' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('food')}>Food</Nav.Link>
                         <Nav.Link href="#travel" className={activeLink === 'travel' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('travel')}>Travel</Nav.Link>
-                        {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown> */}
+                        <span className="navbar-text social-group">
+                            <div className="social-icon">
+                                <a href="https://github.com/philam2001" target="_blank" rel="noopener noreferrer"><img src={gitIcon} alt="" /></a>
+                                <a href="https://www.instagram.com/philamb/" target="_blank" rel="noopener noreferrer"><img src={igIcon} alt="" /></a>
+                                <a href="https://www.linkedin.com/in/phi-yen-lam/" target="_blank" rel="noopener noreferrer"><img src={linkedInIcon} alt="" /></a>
+                            </div>
+                            <button className='vvd' onClick={() => window.location.href = 'mailto:lamyenphi14@gmail.com'}
+                            ><span>Let's Connect</span></button>
+                        </span>
                     </Nav>
-                    <span className="navbar-text">
-                        <div className="social-icon">
-                            <a href="https://github.com/philam2001" target="_blank" rel="noopener noreferrer"><img src={gitIcon} alt="" /></a>
-                            <a href="https://www.instagram.com/philamb/" target="_blank" rel="noopener noreferrer"><img src={igIcon} alt="" /></a>
-                            <a href="https://www.linkedin.com/in/phi-yen-lam/" target="_blank" rel="noopener noreferrer"><img src={linkedInIcon} alt="" /></a>
-                        </div>
-                        <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
-                    </span>
                 </Navbar.Collapse>
             </Container>
         </Navbar >
