@@ -55,27 +55,22 @@ export const Banner = () => {
 
     return (
         <section className="banner" id="home" style={{ opacity: scrollOpacity }}>
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={6} className="text-left">
-                        <div className="text-content">
-                            <span className="tagline">Hello 🌎, I'm </span>
-                            <h1>{`Phi Lam`}</h1>
-                            <span className="wrap">{text}</span>
-                            <div className="welcome">Welcome to my website 🦋</div>
-                            <p></p>
+            <div className="banner-container">
+                <div className="text-content">
+                    <span className="tagline">Hello 🌎, I'm </span>
+                    <h1>Phi Lam</h1>
+                    <span className="wrap">{text}</span>
+                    <div className="welcome">Welcome to my website 🦋</div>
+                </div>
+                <div className="image-container">
+                    <div className="flip-container">
+                        <div className="flipper">
+                            <img className="profile-pic front" src={profilePic} alt="Header Img" />
+                            <img className="profile-pic back" src={flipPic} alt="Back Image" />
                         </div>
-                    </Col>
-                    <Col xs={12} md={6} xl={6} className="image-container" >
-                        <div className="flip-container">
-                            <div className="flipper">
-                                <img className="profile-pic front" src={profilePic} alt="Header Img" />
-                                <img className="profile-pic back" src={flipPic} alt="Back Image" />
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </section >
-    )
-}
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};

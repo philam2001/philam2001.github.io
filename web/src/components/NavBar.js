@@ -76,7 +76,7 @@ export const NavBar = () => {
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         <Nav.Link href="#food" className={activeLink === 'food' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('food')}>Food</Nav.Link>
                         <Nav.Link href="#travel" className={activeLink === 'travel' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('travel')}>Travel</Nav.Link>
-                        <span className="navbar-text social-group">
+                        <span className="navbar-text">
                             <div className="social-icon">
                                 <a href="https://github.com/philam2001" target="_blank" rel="noopener noreferrer"><img src={gitIcon} alt="" /></a>
                                 <a href="https://www.instagram.com/philamb/" target="_blank" rel="noopener noreferrer"><img src={igIcon} alt="" /></a>
