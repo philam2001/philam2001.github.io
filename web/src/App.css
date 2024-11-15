@@ -87,7 +87,7 @@ h6 {
 }
 
 :root {
-  --navbar-spacing: 15px;
+  --navbar-spacing: 18px;
   --gap-link-icons: 200px;
   /* Initial spacing */
 }
@@ -106,6 +106,15 @@ nav.navbar {
   /*todo*/
 }
 
+.custom-container {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  max-width: 1400px;
+  /* Set a fixed max width if desired
+  */
+  margin: 0 auto;
+}
+
 nav.navbar.scrolled {
   padding: 0px 0;
   /* background-color: #171717; */
@@ -118,9 +127,12 @@ nav.navbar a.navbar-brand {
   color: white;
 }
 
-
-.navbar-nav .navbar-link:last-of-type {
+.navbar-link:last-of-type {
   margin-right: var(--gap-link-icons);
+}
+
+nav.navbar {
+  margin: 0 auto;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -129,11 +141,16 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
   letter-spacing: 0.8px;
-  padding: 0 var(--navbar-spacing);
   transition: gap 0.1s ease-in-out;
   font-size: 18px;
+  padding: 0 0 0 var(--navbar-spacing);
   opacity: 0.65;
 }
+
+/* 
+nav.navbar .nav-link.navbar-link {
+  padding: 0 0 0 var(--navbar-spacing);
+} */
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
@@ -144,11 +161,10 @@ span.navbar-text {
   display: flex;
   align-items: center;
   padding: 0;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: nowrap;
   /* min-width: 300px !important; */
 }
-
 
 .social-icon a img {
   width: 50%;
@@ -163,6 +179,7 @@ span.navbar-text {
   display: inline-flex;
   border-radius: 50%;
   align-items: center;
+  margin-left: 8px;
   justify-content: center;
   line-height: 1;
   border: 1px solid rgba(255, 255, 255, 0.5);

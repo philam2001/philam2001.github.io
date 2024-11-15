@@ -7,7 +7,7 @@ import linkedInIcon from '../assets/img/linkedin.svg'
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-    const [navbarSpacing, setNavbarSpacing] = useState(15)
+    const [navbarSpacing, setNavbarSpacing] = useState(18)
     const [gapBetweenLinksAndIcons, setGapBetweenLinksAndIcons] = useState(200);
 
     useEffect(
@@ -33,16 +33,15 @@ export const NavBar = () => {
         console.log("Current screen width:", screenWidth);
 
         // Calculate dynamic gap between links and icons
-        const dynamicGap = screenWidth > 1150 ? (screenWidth - 1120) / 2 : Math.max(8, 15 - (1150 - screenWidth) / 30);
+        const dynamicGap = screenWidth > 1400 ? 340 : Math.max(10, 340 - (1400 - screenWidth) * 0.9);
         setGapBetweenLinksAndIcons(dynamicGap);
 
-        // Calculate navbar spacing based on screen width thresholds
         if (screenWidth < 1150 && screenWidth > 800) {
-            setNavbarSpacing(Math.max(8, 15 - (1150 - screenWidth) / 30));
+            setNavbarSpacing(Math.max(10, 18 - (1150 - screenWidth) / 20));
         } else if (screenWidth <= 800) {
-            setNavbarSpacing(8); // Minimum threshold
+            setNavbarSpacing(10); // Minimum threshold
         } else {
-            setNavbarSpacing(15); // Default for large screens
+            setNavbarSpacing(18); // Default for large screens
         }
     };
 
@@ -61,7 +60,7 @@ export const NavBar = () => {
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""} style={navbarStyle}>
-            <Container>
+            <Container fluid className="custom-container">
                 <Navbar.Brand href="#home">
                     Phi Lam
                 </Navbar.Brand>
