@@ -33,15 +33,15 @@ export const NavBar = () => {
         console.log("Current screen width:", screenWidth);
 
         // Calculate dynamic gap between links and icons
-        const dynamicGap = screenWidth > 1400 ? 340 : Math.max(10, 340 - (1400 - screenWidth) * 0.9);
+        const dynamicGap = screenWidth > 1400 ? 340 : Math.max(8, 340 - (1400 - screenWidth) * 0.9);
         setGapBetweenLinksAndIcons(dynamicGap);
 
-        if (screenWidth < 1150 && screenWidth > 800) {
-            setNavbarSpacing(Math.max(10, 18 - (1150 - screenWidth) / 20));
-        } else if (screenWidth <= 800) {
-            setNavbarSpacing(10); // Minimum threshold
+        if (screenWidth < 1150 && screenWidth > 700) {
+            setNavbarSpacing(Math.max(8, 20 - (1150 - screenWidth) / 20));
+        } else if (screenWidth <= 700) {
+            setNavbarSpacing(8); // Minimum threshold
         } else {
-            setNavbarSpacing(18); // Default for large screens
+            setNavbarSpacing(20); // Default for large screens
         }
     };
 
