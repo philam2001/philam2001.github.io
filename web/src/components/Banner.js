@@ -14,7 +14,7 @@ export const Banner = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            const newOpacity = Math.max(0, 1 - scrollPosition / 500); // Adjust divisor for transparency rate
+            const newOpacity = Math.max(0, 1 - scrollPosition / 450); // Adjust divisor for transparency rate
             setScrollOpacity(newOpacity);
         };
 
@@ -54,7 +54,7 @@ export const Banner = () => {
     }
 
     return (
-        <section className="banner" id="home" style={{ opacity: scrollOpacity }}>
+        <section className="banner" id="home" style={{ opacity: scrollOpacity, backgroundColor: `rgba(23, 23, 23, ${1 - scrollOpacity})` }} >
             <div className="banner-container">
                 <div className="text-content">
                     <span className="tagline">Hello 🌎, I'm </span>
