@@ -362,6 +362,54 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* padding-left: 15vw; */
 }
 
+.me-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+  font-size: 20px;
+  /* padding-left: 15vw; */
+}
+
+.welcome {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeInRight 1.5s ease-out forwards;
+  animation-delay: 0.7s;
+
+}
+
+.flip-container {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeInRight 1.5s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .flip-container {
   width: 250px;

@@ -58,8 +58,10 @@ export const Banner = () => {
             <div className="banner-container">
                 <div className="text-content">
                     <span className="tagline">Hello 🌎, I'm </span>
-                    <h1>Phi Lam</h1>
-                    <span className="wrap">{text}</span>
+                    <div className="me-text">
+                        <h1>Phi Lam</h1>
+                        <span className="wrap">{text}</span>
+                    </div>
                     <div className="welcome">Welcome to my website 🦋</div>
                 </div>
                 <div className="image-container">
