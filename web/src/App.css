@@ -514,9 +514,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .about {
   display: flex;
-  /* Use flexbox for side-by-side layout */
-  align-items: flex-start;
-  padding: 20px 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 60px 20px; */
   box-sizing: border-box;
   min-height: 100vh;
   gap: 50px;
@@ -555,26 +556,43 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: left;
   width: 500px;
   margin: 0 auto;
+  font-size: 14px;
 }
 
-.header {
-  text-align: left;
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  gap: 20px;
+}
+
+.h2-title {
+  font-size: 28px;
+}
+
+.swirl-text {
+  font-size: 1.2rem;
+  color: #d3d3d3;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .about-image {
   flex: 1;
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
   perspective: 1000px;
   margin: auto 0;
 }
 
 .about-container {
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px 50px 50px 50px;
-  width: 100%;
+  padding: 25px 50px 25px 50px;
   background-color: #1f1f1f;
   border-radius: 10px;
 }
@@ -625,4 +643,48 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   to {
     transform: translateX(-50%);
   }
+}
+
+.skills-section {
+  max-width: 900px;
+  width: 100%;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 5 equal columns */
+  gap: 15px;
+}
+
+.skills-title {
+  font-size: 20px;
+  text-align: left;
+  padding: 0 0 10px;
+}
+
+.skill-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: #1f1f1f;
+  width: 175px;
+  padding: 5px 15px 5px;
+  border: 2px solid #ffffff87;
+  box-shadow:
+    0 0 15px rgba(162, 207, 254, 0.1),
+    0 0 25px rgba(162, 207, 254, 0.1);
+  /* 0 0 50px rgba(162, 207, 254, 0.1); */
+  /* 0 0 100px rgba(162, 207, 254, 0.1); */
+}
+
+.skill-icon {
+  width: 30px;
+  /* Set smaller image size */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.skill-text {
+  font-size: 13px;
 }
