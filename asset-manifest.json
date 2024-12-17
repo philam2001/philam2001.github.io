@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.b20aab84.css",
-    "main.js": "/static/js/main.aa51d490.js",
+    "main.css": "/static/css/main.68406775.css",
+    "main.js": "/static/js/main.e6ac648e.js",
     "static/js/453.c5eaf93b.chunk.js": "/static/js/453.c5eaf93b.chunk.js",
     "static/media/me_nyc.png": "/static/media/me_nyc.5bcf7c973a7d5819f109.png",
     "static/media/stars.jpeg": "/static/media/stars.c75aac530b411960bb09.jpeg",
     "static/media/me.jpeg": "/static/media/me.6bf2a5af65c86dbc4a5a.jpeg",
     "static/media/SourceCodePro.ttf": "/static/media/SourceCodePro.46e9d73a686e6dc90ddc.ttf",
     "static/media/profile.jpg": "/static/media/profile.d5ab51269b1deeee7487.jpg",
+    "static/media/ccc.png": "/static/media/ccc.213c19f2d8aa281a4eb3.png",
     "static/media/Vogue.ttf": "/static/media/Vogue.cc23cdc2582e9de16b77.ttf",
     "static/media/ig.svg": "/static/media/ig.465b1f45dbe178755fa1247e3b458495.svg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/git.svg": "/static/media/git.1dc5ab12ef3fc81720b0f4ff72ce5655.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.0318d84df50f52a85e2793e2d482cf19.svg",
     "index.html": "/index.html",
-    "main.b20aab84.css.map": "/static/css/main.b20aab84.css.map",
-    "main.aa51d490.js.map": "/static/js/main.aa51d490.js.map",
+    "main.68406775.css.map": "/static/css/main.68406775.css.map",
+    "main.e6ac648e.js.map": "/static/js/main.e6ac648e.js.map",
     "453.c5eaf93b.chunk.js.map": "/static/js/453.c5eaf93b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b20aab84.css",
-    "static/js/main.aa51d490.js"
+    "static/css/main.68406775.css",
+    "static/js/main.e6ac648e.js"
   ]
 }
