@@ -363,7 +363,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .me-text {
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(20px);
   animation: fadeInUp 1.5s ease-out forwards;
   font-size: 20px;
@@ -372,23 +372,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .welcome {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(100px);
   animation: fadeInRight 1.5s ease-out forwards;
-  animation-delay: 0.7s;
+  animation-delay: 0.5s;
 
 }
 
 .flip-container {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(100px);
   animation: fadeInRight 1.5s ease-out forwards;
-  animation-delay: 0.7s;
+  animation-delay: 0.5s;
 }
 
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(100px);
   }
 
   100% {
@@ -513,15 +513,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .about {
-  /* padding: 100px 10px 100px 10px; */
   display: flex;
   /* Use flexbox for side-by-side layout */
   align-items: flex-start;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
   gap: 50px;
 }
 
-.about-container {
-  padding: 100px 10px 100px 10px;
+.about-1,
+.about-2,
+.about-3 {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.about-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-1 {
+  transition-delay: 0.2s;
+  /* First paragraph */
+}
+
+.about-2 {
+  transition-delay: 0.5s;
+  /* Second paragraph */
+}
+
+.about-3 {
+  transition-delay: 0.8s;
+  /* Third paragraph */
 }
 
 .about-me-pargraph {
@@ -547,6 +573,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
+  padding: 50px 50px 50px 50px;
+  width: 100%;
+  background-color: #1f1f1f;
+  border-radius: 10px;
 }
 
 .about-content {
@@ -554,4 +584,45 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* Use flexbox for side-by-side layout */
   align-items: flex-start;
   gap: 50px;
+}
+
+.marquee-box {
+  width: 100%;
+  overflow: hidden;
+  background-color: #171717;
+  border-radius: 10px;
+  padding: 10px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-flex;
+  /* gap: 50px; */
+  animation: scrollInfinite 20s linear infinite;
+}
+
+.marquee-content span {
+  font-size: 1rem;
+  color: #f8f9fa;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  /* gap: 8px; */
+  margin-right: 50px;
+}
+
+.marquee-box:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Keyframes for Scrolling */
+@keyframes scrollInfinite {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
