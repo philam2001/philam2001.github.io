@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import gitIcon from '../assets/img/git.svg'

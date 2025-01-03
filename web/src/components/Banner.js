@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap"
+import React from "react"
 import { useState, useEffect } from "react"
 import profilePic from "../assets/img/profile.jpg"
 import flipPic from "../assets/img/me.jpeg"

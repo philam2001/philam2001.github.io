@@ -1,3 +1,4 @@
+import React from 'react'
 import gm from '../assets/img/gm.jpeg'
 import tesla from '../assets/img/tesla.png'
 import fe from '../assets/img/fe.png'
@@ -100,7 +101,7 @@ export const Experience = () => {
     return (
         <section className="experience" id="experience">
             <div className="experience-container">
-                <h2 className="h2-title">Experience</h2>
+                <h2 className="exp-h2-title">Experience</h2>
                 <p className="disclaimer">
                     This section provides a more personal perspective on my experiences. For a formal overview highlighting achievements and results, you can view my resume here or access it via the navigation bar above.
                 </p>
