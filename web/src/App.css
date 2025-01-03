@@ -699,28 +699,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 50px;
 }
 
-.experience-section {
+.experience-container {
   max-width: 1000px;
   width: 100%;
+
 }
 
-.experience-header {
+
+.h2-title {
   text-align: left;
-  padding: 0 0 40px;
+  margin-bottom: 20px;
 }
 
-.experience-container {
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-}
-
-.experience-icon {
-  border-radius: 10px;
-  max-width: 100px;
-  margin-left: 20px;
+.disclaimer {
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .experience-card {
@@ -730,5 +723,104 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.experience-entry {
+  width: 100%;
+  margin-right: 20px;
+  /* gap: 20px; */
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* margin-bottom: 10px; */
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.experience-icon {
+  border-radius: 10px;
+  max-width: 100px;
+  margin-left: 20px;
+}
+
+.role-entry {
+  /* margin-bottom: 20px; */
+}
+
+.role-date {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.role-description {
+  text-align: left;
+  font-size: 14px;
+  color: #d7d7d7;
+}
+
+.dropdown-button {
+  border: none;
+  color: white;
+  background: transparent;
+  margin-bottom: 5px;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.dropdown-icon.flipped {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease;
+}
+
+.formula-description {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  background-color: rgb(94, 93, 93);
+  border-radius: 10px;
+}
+
+.formula-description p {
+  margin-bottom: 15px;
+}
+
+.fe-link-container {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.fe-github-link {
+  text-decoration: none;
+  color: #90c4f7;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 2px solid #58a4f1;
+  border-radius: 5px;
+  box-shadow: none !important;
+  text-shadow: 0 0 10px rgba(162, 207, 254, 0.5);
+}
+
+
+.fe-github-link:hover {
+  background-color: #3997f6;
+  /* Blue background on hover */
+  color: white;
 }
