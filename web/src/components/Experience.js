@@ -5,11 +5,14 @@ import fe from '../assets/img/fe.png'
 import { useState } from 'react'
 
 export const Experience = () => {
-    // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    // const toggleDropdown = () => {
-    //     setIsDropdownOpen(!isDropdownOpen);
-    // };
+    console.log("Initial Dropdown State:", isDropdownOpen);
+
+    const toggleDropdown = () => {
+        console.log("Toggling Dropdown. Current state:", isDropdownOpen);
+        setIsDropdownOpen(!isDropdownOpen);
+    };
 
     const experiences = [
         {
@@ -128,14 +131,34 @@ export const Experience = () => {
                                     </div>
 
                                     <p className="role-description"> {role.description}</p>
-
-                                    {/* <ul className="role-description">
-                                        {role.description.map((desc, descInd) => (
-                                            < li key={descInd} > {desc}</li>
-                                            ))}
-                                            </ul> */}
                                 </div>
                             ))}
+                            {exp.company === "UBC Formula Electric" && (
+                                <>
+                                    <button onClick={toggleDropdown} className="dropdown-button">
+                                        {isDropdownOpen ? "Hide Details" : "Show Details"}
+                                    </button>
+                                    {isDropdownOpen && (
+                                        <div className="formula-description">
+                                            <p>
+                                                Formula Electric is a student-led team that designs and builds high-performance electric race cars
+                                                for the Formula SAE Electric competition.
+                                            </p>
+                                            <p>
+                                                Our repository is an open-source project where we contribute software for telemetry, firmware, control systems, and more.
+                                            </p>
+                                            <a
+                                                href="https://github.com/UBCFormulaElectric/Consolidated-Firmware"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="fe-github-link"
+                                            >
+                                                Explore GitHub Repository
+                                            </a>
+                                        </div>
+                                    )}
+                                </>
+                            )}
                         </div>
                     </div>
                 ))}
