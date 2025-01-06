@@ -75,7 +75,8 @@ export const Experience = () => {
                 {
                     position: "Software/Firmware Engineering Lead",
                     date: "Nov 2024 - Present",
-                    description: [],
+                    description: `Leading the algorithm and software development for the vehicle dynamics
+                    of a newly 4 Wheel Drive student-made race car.`,
                 },
                 {
                     position: "Software/Firmware Engineering Member",
