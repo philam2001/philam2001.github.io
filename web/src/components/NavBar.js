@@ -69,7 +69,7 @@ export const NavBar = () => {
                     <span className='navbar-toggler-icon'></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
                         <Nav.Link href="#experience" className={activeLink === 'experienec' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Experience</Nav.Link>
@@ -82,8 +82,12 @@ export const NavBar = () => {
                                 <a href="https://www.instagram.com/philamb/" target="_blank" rel="noopener noreferrer"><img src={igIcon} alt="" /></a>
                                 <a href="https://www.linkedin.com/in/phi-yen-lam/" target="_blank" rel="noopener noreferrer"><img src={linkedInIcon} alt="" /></a>
                             </div>
-                            <button className='vvd' onClick={() => window.location.href = 'mailto:lamyenphi14@gmail.com'}
-                            ><span>Let's Connect</span></button>
+                            <button
+                                className='vvd'
+                                onClick={() => window.location.href = 'mailto:lamyenphi14@gmail.com'}
+                            ><span
+                                className='vvd1'>Let's Connect</span>
+                            </button>
                         </span>
                     </Nav>
                 </Navbar.Collapse>

@@ -116,7 +116,7 @@ nav.navbar {
 }
 
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 6px 0;
   /* background-color: #171717; */
 }
 
@@ -171,7 +171,7 @@ span.navbar-text {
 }
 
 .social-icon a img {
-  width: 50%;
+  width: 60%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
@@ -301,8 +301,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
+.navbar-collapse {
+  justify-content: flex-end;
+  /* Aligns content to the right */
+}
+
+.navbar-collapse.collapse {
+  display: none;
+  /* Default Bootstrap behavior for collapsed state */
+}
+
+.navbar-collapse.collapse.show {
+
+  display: flex;
+  /* When expanded, show and apply flex layout */
+}
+
 .vvd {
+  /* height: 30px; */
+  display: flex;
   min-width: 170px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
 }
 
@@ -609,7 +630,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   box-sizing: border-box;
 }
 
-@media (max-width: 805px) {
+@media (max-width: 790px) {
   .about-content {
     flex-direction: column;
     align-items: center;
@@ -625,6 +646,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     text-align: center;
   }
 
+  /* adjust experience */
+  .experience-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* make drop down for experiences and skills */
+@media (max-width: 650px) {
+
+  .experience-card {
+    flex-direction: row;
+  }
+
+  .role-date {
+    font-size: 10px;
+  }
+
+  .role-title {
+    font-size: 15px;
+  }
 }
 
 .marquee-box {
@@ -675,7 +719,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   /* 5 equal columns */
   gap: 15px;
 }
@@ -790,6 +834,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: baseline;
 }
 
+.role-title,
+.company-name {
+  padding: 0px 20px 0px 0px;
+  text-align: left;
+}
+
 .role-description {
   text-align: left;
   font-size: 14px;
@@ -800,7 +850,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: none;
   color: white;
   background: transparent;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .dropdown-icon {
@@ -814,8 +864,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .formula-description {
-  padding-top: 20px;
-  padding-bottom: 5px;
+  padding: 20px 10px 5px 10px;
   font-size: 14px;
   background-color: rgb(94, 93, 93);
   border-radius: 10px;
