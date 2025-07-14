@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import './NavBar.css'
+
 import gitIcon from '../assets/img/git.svg'
 import igIcon from '../assets/img/ig.svg'
 import linkedInIcon from '../assets/img/linkedin.svg'
@@ -74,8 +77,8 @@ export const NavBar = () => {
                         <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
                         <Nav.Link href="#experience" className={activeLink === 'experienec' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Experience</Nav.Link>
                         <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                        <Nav.Link href="#food" className={activeLink === 'food' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('food')}>Food</Nav.Link>
-                        <Nav.Link href="#travel" className={activeLink === 'travel' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('travel')}>Travel</Nav.Link>
+                        <Nav.Link href="food" className={activeLink === 'food' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('food')}>Food</Nav.Link>
+                        <Nav.Link href="travel" className={activeLink === 'travel' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('travel')}>Travel</Nav.Link>
                         <span className="navbar-text">
                             <div className="social-icon">
                                 <a href="https://github.com/philam2001" target="_blank" rel="noopener noreferrer"><img src={gitIcon} alt="" /></a>

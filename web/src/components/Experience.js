@@ -1,4 +1,5 @@
 import React from 'react'
+import './Experience.css'
 import gm from '../assets/img/gm.jpeg'
 import tesla from '../assets/img/tesla.png'
 import fe from '../assets/img/fe.png'

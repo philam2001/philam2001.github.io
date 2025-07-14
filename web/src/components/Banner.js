@@ -1,5 +1,8 @@
 import React from "react"
+import './Banner.css';
+
 import { useState, useEffect } from "react"
+
 import profilePic from "../assets/img/profile.jpg"
 import flipPic from "../assets/img/me.jpeg"
 

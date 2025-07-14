@@ -1,4 +1,5 @@
 import React from "react";
+import './About.css';
 import profile from "../assets/img/me_nyc.png"
 import { useEffect } from "react";
 import ccc from '../assets/img/ccc.png'
