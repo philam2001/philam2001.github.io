@@ -23,7 +23,7 @@ nav.navbar::before {
     z-index: 1;
 
     background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.8) 0%,
+            /* rgba(0, 0, 0, 0.8) 0%, */
             /* subtle dark at top */
             rgba(0, 0, 0, 0) 100%
             /* fully transparent at bottom */
@@ -173,6 +173,13 @@ span.navbar-text {
 }
 
 
+nav.navbar .navbar-toggler {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
     outline: none;
@@ -241,4 +248,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+}
+
+
+.nav-scroll-wrapper {
+    /* backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 12px; */
+    padding: 10px 0px;
+    /* display: flex;
+    flex-wrap: wrap */
 }

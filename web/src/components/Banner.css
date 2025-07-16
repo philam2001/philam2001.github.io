@@ -170,3 +170,26 @@
         transform: translateY(-10px);
     }
 }
+
+/* 
+TODO: why do i need this here if it's already in global app.css */
+.profile-pic {
+    position: absolute;
+    /* Aligns both images in the same position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ensure both images fully occupy the container */
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow:
+        0 0 15px rgba(162, 207, 254, 0.5),
+        0 0 25px rgba(162, 207, 254, 0.5),
+        0 0 50px rgba(162, 207, 254, 0.5),
+        0 0 100px rgba(162, 207, 254, 0.3);
+    animation: glow 2s infinite alternate;
+    transition: transform 0.6s ease-in-out;
+}
