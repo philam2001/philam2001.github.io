@@ -65,10 +65,8 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""} style={navbarStyle}>
             <Container fluid className="custom-container">
-                <Navbar.Brand href="#home">
-                    Phi Lam
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav">
+                <Navbar.Brand href="#home">Phi Lam</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" >
                     <span className='navbar-toggler-icon'></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
