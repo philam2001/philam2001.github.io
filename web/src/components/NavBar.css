@@ -33,8 +33,8 @@ nav.navbar::before {
 }
 
 .custom-container {
-    padding-left: 50px !important;
-    padding-right: 50px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
     max-width: 1400px;
     /* Set a fixed max width if desired
     */
@@ -252,10 +252,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .nav-scroll-wrapper {
-    /* backdrop-filter: blur(6px);
-    background-color: rgba(0, 0, 0, 0.45);
-    border-radius: 12px; */
-    padding: 10px 0px;
-    /* display: flex;
-    flex-wrap: wrap */
+    padding: 15px 0px;
+}
+
+@media (max-width: 991px) {
+    .nav-scroll-wrapper {
+        padding: 0px 0px 16px 0px;
+        /* Adjust as needed */
+    }
 }

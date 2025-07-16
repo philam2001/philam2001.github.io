@@ -117,13 +117,16 @@ export const Experience = () => {
             location: "Vancouver, BC",
             roles: [
                 {
-                    position: "Software/Firmware Engineering Lead",
+                    position: "Software /Firmware Engineering Lead",
                     date: "Nov 2024 - Present",
-                    description: `Leading the algorithm and software development for the vehicle dynamics
-                    of a newly 4 Wheel Drive student-made race car.`,
+                    description: `Led the Vehicle Dynamics team in developing the control algorithms 
+                    and software for a newly built 4-wheel drive student-designed race car. Contributed 
+                    to accurate GPS integration through extensive testing, improved regenerative braking 
+                    during the transition from 2WD to 4WD, and supported teammates in developing their 
+                    own features and subsystems`,
                 },
                 {
-                    position: "Software/Firmware Engineering Member",
+                    position: "Software /Firmware Engineering Member",
                     date: "Jan 2023 - Nov 2024",
                     description: `
                     After my year-long internship, I transitioned into a software and firmware role. 

@@ -120,20 +120,24 @@
 
 }
 
-/* make drop down for experiences and skills */
-@media (max-width: 650px) {
 
-    .experience-card {
-        flex-direction: row;
+
+@media (max-width: 790px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .role-date {
-        font-size: 10px;
+    .about-image {
+        margin-bottom: 20px;
     }
 
-    .role-title {
-        font-size: 15px;
+    .about-me-pargraph {
+        max-width: 100%;
+        text-align: center;
     }
+
 }
 
 .marquee-box {

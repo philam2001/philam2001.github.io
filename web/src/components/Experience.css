@@ -37,7 +37,6 @@
 }
 
 .experience-entry {
-    width: 100%;
     margin-right: 20px;
 }
 
@@ -137,4 +136,39 @@
     background-color: #3997f6;
     /* Blue background on hover */
     color: white;
+}
+
+
+
+@media (max-width: 790px) {
+
+    /* adjust experience */
+    .experience-card {
+        flex-direction: column;
+    }
+
+    .experience-entry {
+        margin-left: 20px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .experience-icon {
+        max-width: 80px;
+        margin-left: 20px;
+    }
+
+    .experience-card {
+        flex-direction: row;
+    }
+
+    .role-date {
+        font-size: 14px;
+    }
+
+    .role-title {
+        font-size: 14px;
+    }
 }
