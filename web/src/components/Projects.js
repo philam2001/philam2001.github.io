@@ -49,7 +49,8 @@ export const Projects = () => {
             description: (
                 <>
                     Led development of 4WD control algorithms for electric race car vehicle dynamics
-                    in <strong>C/C++</strong>. Used <strong>MATLAB, Simulink, and Python</strong> to simulate control logic and
+                    in <strong>C/C++</strong>, collaborating within a large, shared codebase alongside multiple engineers.
+                    Used <strong>MATLAB, Simulink, and Python</strong> to simulate control logic and
                     analyze real-world data. Designed torque vectoring strategies and supervised a
                     subteam of 3 engineers focused on testing, integration, and optimization.
                     Led the effort on GPS and IMU

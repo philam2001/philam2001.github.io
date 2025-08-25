@@ -119,18 +119,21 @@ export const Experience = () => {
                 {
                     position: "Software /Firmware Engineering Lead",
                     date: "Nov 2024 - Present",
-                    description: `Led the Vehicle Dynamics team in developing the control algorithms 
-                    and software for a newly built 4-wheel drive student-designed race car. Contributed 
-                    to accurate GPS integration through extensive testing, improved regenerative braking 
-                    during the transition from 2WD to 4WD, and supported teammates in developing their 
-                    own features and subsystems`,
+                    description: `Lead engineer for vehicle dynamics on a newly designed 4WD electric race car. 
+                    Developed core control algorithms and supervised GPS and IMU integration for accurate speed 
+                    and slip tracking. Improved regenerative braking logic to support the transition from 2WD to 
+                    4WD and mentored teammates on subsystem development. 
+
+                    Worked within a modular firmware architecture (app, io, hw layers),
+                    frequently coordinating across modules to ensure system-wide stability. Regularly reviewed pull 
+                    requests, managed integrations, and upheld code quality standards across our shared, multi-contributor codebase.`,
                 },
                 {
                     position: "Software /Firmware Engineering Member",
                     date: "Jan 2023 - Nov 2024",
                     description: `
                     After my year-long internship, I transitioned into a software and firmware role. 
-                    I worked on porting our vehicle controller firmware from the previous car model to 
+                    I worked on porting our legacy vehicle controller firmware from the previous car model to 
                     a new PCB with a different MCU architecture. I also developed the team's first 
                     iterations of regenerative braking for 2WD and one-pedal driving, enhancing the 
                     vehicle's energy recovery capabilities.
