@@ -6,10 +6,22 @@ import ccc from '../assets/img/ccc.png'
 import docker from '../assets/img/docker.png'
 import fpga from '../assets/img/fpga.png'
 import golang from '../assets/img/golang.png'
-import js from '../assets/img/js.png'
+import big3 from '../assets/img/big3.png'
 import postgres from '../assets/img/postgresql.png'
 import python from '../assets/img/python.png'
 import react from '../assets/img/react.png'
+import tsdb from '../assets/img/timescaledb.png'
+import ws from '../assets/img/ws.png'
+import cloud from '../assets/img/cloud.png'
+import bash from '../assets/img/bash.png'
+import sk from '../assets/img/scikit-learn.png'
+import pyt from '../assets/img/pyt.png'
+import kafka from '../assets/img/Kafka.png'
+import kub from '../assets/img/Kubernetes.png'
+import java from '../assets/img/Java.png'
+import prom from '../assets/img/Prometheus.png'
+import ans from '../assets/img/Ansible.png'
+import graf from '../assets/img/Grafana.png'
 
 
 export const About = () => {
@@ -50,13 +62,13 @@ export const About = () => {
 
                     <div className="about-me-pargraph">
                         <p className="about-1">
-                            {/* I was born in Vietnam but have lived in Bangkok 🇹🇭, Louisiana 🇺🇸,
-                    Calgary 🇨🇦, Reno 🇺🇸, and Vancouver 🇨🇦. */}
-                            Hi! I'm Phi and I'm studying Electrical Engineering ⚡️ at the University of British
-                            Columbia in Vancouver, Canada. My engineering journey began without prior experience with
-                            programming or engineering concepts.
+                            I'm a builder and an artist, whether it's creating designs and food to building machines and technical creations.
+                            This page showcases my professional career as well as projects of mine driven by design, depth, and creativity. I recently
+                            graduated as a BASc Electrical Engineering Student ⚡️ at the University of British
+                            Columbia in Vancouver, Canada.
                         </p>
-                        <p className="about-2"> I grew to enjoy applying software to complement
+                        <p className="about-2"> My engineering journey began without prior experience with
+                            programming or engineering concepts. I grew to enjoy applying software to complement
                             hardware and eventually focusing on software itself—ranging from personal projects to solving
                             complex systems in large, interdisciplinary team environments like my UBC Formula Electric team 🏎️! </p>
                         <p className="about-3">A lot of what I know is self-taught:</p>
@@ -101,8 +113,8 @@ export const About = () => {
                         <span class="skill-text">React</span>
                     </div>
                     <div class="skill-card">
-                        <img src={js} alt="" class="skill-icon" />
-                        <span class="skill-text">JS</span>
+                        <img src={big3} alt="" class="skill-icon" />
+                        <span class="skill-text">JS, CSS, HTML</span>
                     </div>
                     <div class="skill-card">
                         <img src={fpga} alt="" class="skill-icon" />
@@ -115,6 +127,54 @@ export const About = () => {
                     <div class="skill-card">
                         <img src={postgres} alt="" class="skill-icon" />
                         <span class="skill-text">Postgres</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={tsdb} alt="" class="skill-icon" />
+                        <span class="skill-text">TimescaleDB</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={ws} alt="" class="skill-icon" />
+                        <span class="skill-text">Wireshark</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={cloud} alt="" class="skill-icon" />
+                        <span class="skill-text">AWS / GCP</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={bash} alt="" class="skill-icon" />
+                        <span class="skill-text">Linux/ Bash</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={pyt} alt="" class="skill-icon" />
+                        <span class="skill-text">Pytorch</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={sk} alt="" class="skill-icon" />
+                        <span class="skill-text">Sklearn</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={java} alt="" class="skill-icon" />
+                        <span class="skill-text">Java</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={graf} alt="" class="skill-icon" />
+                        <span class="skill-text">Grafana</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={prom} alt="" class="skill-icon" />
+                        <span class="skill-text">Prometheus</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={kafka} alt="" class="skill-icon" />
+                        <span class="skill-text">Kafka</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={ans} alt="" class="skill-icon" />
+                        <span class="skill-text">Ansible</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src={kub} alt="" class="skill-icon" />
+                        <span class="skill-text">Kubernetes</span>
                     </div>
                 </div>
             </div>

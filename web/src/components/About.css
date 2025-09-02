@@ -59,6 +59,7 @@
 
 .h2-title {
     font-size: 28px;
+    font-family: 'Vogue', sans-serif !important;
 }
 
 .swirl-text {
@@ -78,7 +79,7 @@
 }
 
 .about-container {
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 25px 50px 25px 50px;
@@ -196,9 +197,10 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
     background-color: #1f1f1f;
-    width: 175px;
-    padding: 5px 15px 5px;
+    width: 180px;
+    padding: 5px 15px;
     border: 2px solid #ffffff87;
     box-shadow:
         0 0 15px rgba(162, 207, 254, 0.1),
@@ -209,9 +211,7 @@
 
 .skill-icon {
     width: 30px;
-    /* Set smaller image size */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
 .skill-text {

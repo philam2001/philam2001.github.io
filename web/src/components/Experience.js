@@ -85,8 +85,8 @@ export const Experience = () => {
                     support production testers for Tesla’s energy and vehicle products, with a focus on Powerwall 3 (PW3). 
 
                     I helped optimize existing testers, resolving long-standing issues and improving their performance. 
-                    Later, I led the development of a new tester for PW3 working with cross-functional teams to design 
-                    and implement software that enhanced testing reliability and supported to the start of production.
+                    Later, I led the development of a new tester for PW3 working with cross-functional teams across the globe
+                    to design and implement software that enhanced testing reliability and supported to the start of production.
 
                     `,
                     // This role allowed me to work closely with cross-functional teams, troubleshoot complex systems, 
@@ -119,7 +119,12 @@ export const Experience = () => {
                 {
                     position: "Software /Firmware Engineering Lead",
                     date: "Nov 2024 - Present",
-                    description: `Lead engineer for vehicle dynamics on a newly designed 4WD electric race car. 
+                    description: `
+                    Formula Electric is a multidisciplinary engineering team of 100+ students building 
+                    high-performance electric race cars from scratch every year for international competition. 
+                    
+                    
+                    I'm a lead engineer for vehicle dynamics on a newly designed 4WD electric race car. 
                     Developed core control algorithms and supervised GPS and IMU integration for accurate speed 
                     and slip tracking. Improved regenerative braking logic to support the transition from 2WD to 
                     4WD and mentored teammates on subsystem development. 
@@ -155,7 +160,7 @@ export const Experience = () => {
             <div className="experience-container">
                 <h2 className="exp-h2-title">Experience</h2>
                 <p className="disclaimer">
-                    This section provides a more personal perspective on my experiences. For a formal overview highlighting achievements and results, you can view my resume here or access it via the navigation bar above.
+                    This section provides a more personal perspective on my experiences. For a formal and concise overview highlighting achievements and results, you can view my resume here.
                 </p>
 
                 {experiences.map((exp, index) => (

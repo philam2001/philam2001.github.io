@@ -76,12 +76,12 @@ export const NavBar = () => {
                             style={{ maxHeight: '125px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="/#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                            <Nav.Link href="/#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
-                            <Nav.Link href="/#experience" className={activeLink === 'experienec' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Experience</Nav.Link>
-                            <Nav.Link href="/#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                            <Nav.Link href="food" className={activeLink === 'food' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('food')}>Food</Nav.Link>
-                            <Nav.Link href="travel" className={activeLink === 'travel' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('travel')}>Travel</Nav.Link>
+                            <Nav.Link href="/#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>home</Nav.Link>
+                            <Nav.Link href="/#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>about</Nav.Link>
+                            <Nav.Link href="/#experience" className={activeLink === 'experienec' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>experience</Nav.Link>
+                            <Nav.Link href="/#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>projects</Nav.Link>
+                            <Nav.Link href="food" className={activeLink === 'food' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('food')}>food</Nav.Link>
+                            <Nav.Link href="travel" className={activeLink === 'travel' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('travel')}>travel</Nav.Link>
                         </Nav>
                     </div>
                     <span className="navbar-text">
@@ -94,7 +94,7 @@ export const NavBar = () => {
                             className='vvd'
                             onClick={() => window.location.href = 'mailto:lamyenphi14@gmail.com'}
                         ><span
-                            className='vvd1'>Let's Connect</span>
+                            className='vvd1'>let's connect!</span>
                         </button>
                     </span>
                 </Navbar.Collapse>

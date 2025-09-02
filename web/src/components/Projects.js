@@ -88,25 +88,6 @@ export const Projects = () => {
             images: [feproj, regen],
             tags: ["C", "C++", "Python"],
             link: "https://github.com/UBCFormulaElectric/Consolidated-Firmware",
-        },
-        {
-            title: "Simple Reduced Instruction Set Computer",
-            description: (
-                <>
-                    My partner and I designed and implemented a simple computer using <strong>Verilog</strong>,
-                    featuring a custom reduced instruction set architecture (RISC). The system
-                    included datapaths, a CPU, a control state machine, registers, and memory components.
-                    We built this on an <strong>FPGA</strong> (DE1-SoC), shown in the bottom right image.
-
-                    Our design supports 16-bit data and instruction width, with an 8-bit address space
-                    and 256-word memory. At the end of the lab, we were able to write programs implementing
-                    any algorithm that fits within this memory model. The processor is capable of executing
-                    a small set of ARM-like instructions.
-                </>
-            ),
-            images: [risc, risc, de1],
-            tags: ["Verilog", "FPGA"],
-            link: "https://github.com/philam2001/RISC_Machine",
         }, {
             title: "Conditional Image Generation with PixelCNN++",
             description: (
@@ -169,6 +150,25 @@ export const Projects = () => {
             images: [finance, finance2],
             tags: ["Python", "Sklearn", "NLTK", "NLP"],
             link: "https://github.com/philam2001/financial-sentiment-analysis",
+        },
+        {
+            title: "Simple Reduced Instruction Set Computer",
+            description: (
+                <>
+                    My partner and I designed and implemented a simple computer using <strong>Verilog</strong>,
+                    featuring a custom reduced instruction set architecture (RISC). The system
+                    included datapaths, a CPU, a control state machine, registers, and memory components.
+                    We built this on an <strong>FPGA</strong> (DE1-SoC), shown in the bottom right image.
+
+                    Our design supports 16-bit data and instruction width, with an 8-bit address space
+                    and 256-word memory. At the end of the lab, we were able to write programs implementing
+                    any algorithm that fits within this memory model. The processor is capable of executing
+                    a small set of ARM-like instructions.
+                </>
+            ),
+            images: [risc, risc, de1],
+            tags: ["Verilog", "FPGA"],
+            link: "https://github.com/philam2001/RISC_Machine",
         }, {
             title: "Project Euler",
             description: (
