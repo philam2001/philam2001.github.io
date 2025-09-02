@@ -45,6 +45,29 @@ export const About = () => {
         return () => targets.forEach((target) => observer.unobserve(target));
     }, []);
 
+    const skills = [
+        { icon: ccc, label: "C, C++, C#", level: "Experienced" },
+        { icon: python, label: "Python", level: "Experienced" },
+        { icon: golang, label: "Golang", level: "Experienced" },
+        { icon: react, label: "React", level: "Experienced" },
+        { icon: big3, label: "JS, CSS, HTML", level: "Experienced" },
+        { icon: fpga, label: "Verilog", level: "Proficient" },
+        { icon: docker, label: "Docker", level: "Proficient" },
+        { icon: postgres, label: "Postgres", level: "Proficient" },
+        { icon: tsdb, label: "TimescaleDB", level: "Proficient" },
+        { icon: ws, label: "Wireshark", level: "Proficient" },
+        { icon: cloud, label: "AWS / GCP", level: "Proficient" },
+        { icon: bash, label: "Linux / Bash", level: "Experienced" },
+        { icon: pyt, label: "PyTorch", level: "Experienced" },
+        { icon: sk, label: "Sklearn", level: "Experienced" },
+        { icon: java, label: "Java", level: "Learning" },
+        { icon: graf, label: "Grafana", level: "Proficient" },
+        { icon: prom, label: "Prometheus", level: "Proficient" },
+        { icon: kafka, label: "Kafka", level: "Learning" },
+        { icon: ans, label: "Ansible", level: "Learning" },
+        { icon: kub, label: "Kubernetes", level: "Learning" },
+    ];
+
     return (
         <section className="about" id="about">
             <div className="about-container">
@@ -62,15 +85,21 @@ export const About = () => {
 
                     <div className="about-me-pargraph">
                         <p className="about-1">
-                            I'm a builder and an artist, whether it's creating designs and food to building machines and technical creations.
-                            This page showcases my professional career as well as projects of mine driven by design, depth, and creativity. I recently
-                            graduated as a BASc Electrical Engineering Student ⚡️ at the University of British
-                            Columbia in Vancouver, Canada.
+                            I'm a builder and an artist, whether it's creating designs and
+                            food to building machines and technical creations. This page
+                            showcases my professional career as well as projects of mine
+                            driven by design, depth, and creativity. I recently graduated as a
+                            BASc Electrical Engineering Student ⚡️ at the University of
+                            British Columbia in Vancouver, Canada.
                         </p>
-                        <p className="about-2"> My engineering journey began without prior experience with
-                            programming or engineering concepts. I grew to enjoy applying software to complement
-                            hardware and eventually focusing on software itself—ranging from personal projects to solving
-                            complex systems in large, interdisciplinary team environments like my UBC Formula Electric team 🏎️! </p>
+                        <p className="about-2">
+                            My engineering journey began without prior experience with
+                            programming or engineering concepts. I grew to enjoy applying
+                            software to complement hardware and eventually focusing on software
+                            itself—ranging from personal projects to solving complex systems in
+                            large, interdisciplinary team environments like my UBC Formula
+                            Electric team 🏎️!
+                        </p>
                         <p className="about-3">A lot of what I know is self-taught:</p>
                         <div className="marquee-box">
                             <div className="marquee-content">
@@ -96,86 +125,18 @@ export const About = () => {
             <div className="skills-section">
                 <div className="skills-header"><h2 class="skills-title">Skills</h2></div>
                 <div className="skills-container">
-                    <div class="skill-card">
-                        <img src={ccc} alt="" class="skill-icon" />
-                        <span class="skill-text">C, C++, C#</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={python} alt="" class="skill-icon" />
-                        <span class="skill-text">Python</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={golang} alt="" class="skill-icon" />
-                        <span class="skill-text">Golang</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={react} alt="" class="skill-icon" />
-                        <span class="skill-text">React</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={big3} alt="" class="skill-icon" />
-                        <span class="skill-text">JS, CSS, HTML</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={fpga} alt="" class="skill-icon" />
-                        <span class="skill-text">Verilog</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={docker} alt="" class="skill-icon" />
-                        <span class="skill-text">Docker</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={postgres} alt="" class="skill-icon" />
-                        <span class="skill-text">Postgres</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={tsdb} alt="" class="skill-icon" />
-                        <span class="skill-text">TimescaleDB</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={ws} alt="" class="skill-icon" />
-                        <span class="skill-text">Wireshark</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={cloud} alt="" class="skill-icon" />
-                        <span class="skill-text">AWS / GCP</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={bash} alt="" class="skill-icon" />
-                        <span class="skill-text">Linux/ Bash</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={pyt} alt="" class="skill-icon" />
-                        <span class="skill-text">Pytorch</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={sk} alt="" class="skill-icon" />
-                        <span class="skill-text">Sklearn</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={java} alt="" class="skill-icon" />
-                        <span class="skill-text">Java</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={graf} alt="" class="skill-icon" />
-                        <span class="skill-text">Grafana</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={prom} alt="" class="skill-icon" />
-                        <span class="skill-text">Prometheus</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={kafka} alt="" class="skill-icon" />
-                        <span class="skill-text">Kafka</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={ans} alt="" class="skill-icon" />
-                        <span class="skill-text">Ansible</span>
-                    </div>
-                    <div class="skill-card">
-                        <img src={kub} alt="" class="skill-icon" />
-                        <span class="skill-text">Kubernetes</span>
-                    </div>
+                    {skills.map((s) => (
+                        <div
+                            key={s.label}
+                            className="skill-card"
+                            tabIndex="0"
+                            aria-label={`${s.label}: ${s.level}`}
+                        >
+                            <img src={s.icon} alt="" class="skill-icon" />
+                            <span class="skill-text">{s.label}</span>
+                            <span className="skill-tooltip">{s.level}</span>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section >);
