@@ -160,9 +160,38 @@ export const Experience = () => {
             <div className="experience-container">
                 <h2 className="exp-h2-title">Experience</h2>
                 <p className="disclaimer">
-                    This section provides a more personal perspective on my experiences. For a formal and concise overview highlighting achievements and results, you can view my resume here.
+                    This section provides a more personal perspective on my experiences. For a formal and concise overview
+                    highlighting achievements and results, you can view my resume{' '}
+                    <span className="resume-inline dropdown">
+                        <button
+                            className="resume-trigger dropdown-toggle"
+                            type="button"
+                            id="resumeDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            here
+                        </button>
+                        <div className="dropdown-menu" aria-labelledby="resumeDropdown">
+                            <a
+                                className="dropdown-item"
+                                href="/resumes/Phi_Lam_Software_Resume.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Software Engineer Resume
+                            </a>
+                            <a
+                                className="dropdown-item"
+                                href="/resumes/Phi_Lam_ML_Resume.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                ML Engineer Resume
+                            </a>
+                        </div>
+                    </span>.
                 </p>
-
                 {experiences.map((exp, index) => (
                     <div className="experience-card" key={index}>
                         <img

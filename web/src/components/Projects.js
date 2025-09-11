@@ -117,12 +117,12 @@ export const Projects = () => {
                     (e.g. AI/ML training) across compute nodes from users' laptops.
 
                     Developed a <strong>polling algorithm</strong> using <strong>bash</strong> and <strong>systemd</strong> on user devices
-                    to detect job drops into shared <strong>SFTP</strong> folders. These folders are connected to a central server, which triggers
+                    to detect job drops into shared <strong>NFS</strong> folders. These folders are connected to a central server, which triggers
                     the provisioning pipeline upon new job detection.
 
                     Designed the <strong>main node</strong> to coordinate job orchestration, featuring a <strong>Flask</strong> backend,
                     containerized using <strong>Docker</strong>, and integrated with <strong>MariaDB</strong> and
-                    <strong>PostgreSQL TimescaleDB</strong> to manage user schemas, job state, container configs, and execution metadata.
+                    <strong> PostgreSQL TimescaleDB</strong> to manage user schemas, job state, container configs, and execution metadata.
 
                     Created a <strong>React</strong> dashboard and <strong>REST APIs</strong> for users to track job progress in real time.
 

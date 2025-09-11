@@ -27,6 +27,38 @@
     margin-bottom: 40px;
 }
 
+.resume-inline {
+    display: inline-block;
+}
+
+.resume-trigger {
+    padding: 5px 8px;
+    line-height: 1.1;
+    background-color: #f6b3b3;
+    border-radius: .375rem;
+    box-shadow: none;
+    border: none;
+    transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.resume-trigger:hover {
+    box-shadow:
+        0 0 18px rgba(247, 193, 193, 0.2),
+        0 0 20px rgba(247, 193, 193, 0.2);
+}
+
+.dropdown-menu {
+    --bs-dropdown-link-color: 111;
+    --bs-dropdown-link-hover-color: #f7c1c1;
+    --bs-dropdown-link-hover-bg: transparent;
+    --bs-dropdown-link-active-color: #111;
+    /* if you want an active highlight */
+    --bs-dropdown-link-active-bg: #f7c1c1;
+    /* optional active bg */
+    --bs-dropdown-header-color: #f7c1c1;
+    --bs-dropdown-link-disabled-color: #f7c1c180;
+}
+
 .experience-card {
     background-color: #1f1f1f;
     padding: 30px 15px 20px;
