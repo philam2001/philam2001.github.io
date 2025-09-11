@@ -1,17 +1,58 @@
 import React from 'react'
+import './Experience.css'
 import gm from '../assets/img/gm.jpeg'
 import tesla from '../assets/img/tesla.png'
 import fe from '../assets/img/fe.png'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export const Experience = () => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // for the Formula Electric extra section
+    const [isCompanyRolesDropdown, setIsCompanyRolesDropdown] = useState({}); // for when screen is smaller to collapse role description
+    const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth <= 650);
 
-    console.log("Initial Dropdown State:", isDropdownOpen);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallWindow(window.innerWidth <= 650);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const ArrowToggle = ({ isOpen, onClick }) => (
+        <button onClick={onClick} className="dropdown-button">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 330.002 330.002"
+                className={`dropdown-icon ${isOpen ? "flipped" : ""}`}
+                width="20px"
+                height="20px"
+            >
+                <path
+                    d="M324.001,209.25L173.997,96.75c-5.334-4-12.667-4-18,0L6.001,209.25c-6.627,4.971-7.971,14.373-3,21
+                    c2.947,3.93,7.451,6.001,12.012,6.001c3.131,0,6.29-0.978,8.988-3.001L164.998,127.5l141.003,105.75c6.629,4.972,16.03,3.627,21-3
+                    C331.972,223.623,330.628,214.221,324.001,209.25z"
+                    fill="currentColor"
+                />
+            </svg>
+        </button>
+    );
 
     const toggleDropdown = () => {
         console.log("Toggling Dropdown. Current state:", isDropdownOpen);
-        setIsDropdownOpen(!isDropdownOpen);
+        setIsDropdownOpen((prev) => !prev);
+    };
+
+    const toggleCompanyDropdown = (expIndex) => {
+        setIsCompanyRolesDropdown((prev) => ({
+            ...prev,
+            [expIndex]: !prev[expIndex],
+        }));
+
+        // close nested Formula Electric dropdown if the parent collapses
+        if (experiences[expIndex].hasNestedDropdown && isCompanyRolesDropdown[expIndex]) {
+            setIsDropdownOpen(false);
+        }
     };
 
     const experiences = [
@@ -44,8 +85,8 @@ export const Experience = () => {
                     support production testers for Tesla’s energy and vehicle products, with a focus on Powerwall 3 (PW3). 
 
                     I helped optimize existing testers, resolving long-standing issues and improving their performance. 
-                    Later, I led the development of a new tester for PW3 working with cross-functional teams to design 
-                    and implement software that enhanced testing reliability and supported to the start of production.
+                    Later, I led the development of a new tester for PW3 working with cross-functional teams across the globe
+                    to design and implement software that enhanced testing reliability and supported to the start of production.
 
                     `,
                     // This role allowed me to work closely with cross-functional teams, troubleshoot complex systems, 
@@ -76,17 +117,28 @@ export const Experience = () => {
             location: "Vancouver, BC",
             roles: [
                 {
-                    position: "Software/Firmware Engineering Lead",
+                    position: "Software /Firmware Engineering Lead",
                     date: "Nov 2024 - Present",
-                    description: `Leading the algorithm and software development for the vehicle dynamics
-                    of a newly 4 Wheel Drive student-made race car.`,
+                    description: `
+                    Formula Electric is a multidisciplinary engineering team of 100+ students building 
+                    high-performance electric race cars from scratch every year for international competition. 
+                    
+                    
+                    I'm a lead engineer for vehicle dynamics on a newly designed 4WD electric race car. 
+                    Developed core control algorithms and supervised GPS and IMU integration for accurate speed 
+                    and slip tracking. Improved regenerative braking logic to support the transition from 2WD to 
+                    4WD and mentored teammates on subsystem development. 
+
+                    Worked within a modular firmware architecture (app, io, hw layers),
+                    frequently coordinating across modules to ensure system-wide stability. Regularly reviewed pull 
+                    requests, managed integrations, and upheld code quality standards across our shared, multi-contributor codebase.`,
                 },
                 {
-                    position: "Software/Firmware Engineering Member",
+                    position: "Software /Firmware Engineering Member",
                     date: "Jan 2023 - Nov 2024",
                     description: `
                     After my year-long internship, I transitioned into a software and firmware role. 
-                    I worked on porting our vehicle controller firmware from the previous car model to 
+                    I worked on porting our legacy vehicle controller firmware from the previous car model to 
                     a new PCB with a different MCU architecture. I also developed the team's first 
                     iterations of regenerative braking for 2WD and one-pedal driving, enhancing the 
                     vehicle's energy recovery capabilities.
@@ -101,15 +153,45 @@ export const Experience = () => {
                     electrical engineering knowledge. `,
                 },
             ],
+            hasNestedDropdown: true,
         }];
     return (
         <section className="experience" id="experience">
             <div className="experience-container">
                 <h2 className="exp-h2-title">Experience</h2>
                 <p className="disclaimer">
-                    This section provides a more personal perspective on my experiences. For a formal overview highlighting achievements and results, you can view my resume here or access it via the navigation bar above.
+                    This section provides a more personal perspective on my experiences. For a formal and concise overview
+                    highlighting achievements and results, you can view my resume{' '}
+                    <span className="resume-inline dropdown">
+                        <button
+                            className="resume-trigger dropdown-toggle"
+                            type="button"
+                            id="resumeDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            here
+                        </button>
+                        <div className="dropdown-menu" aria-labelledby="resumeDropdown">
+                            <a
+                                className="dropdown-item"
+                                href="/resumes/Phi_Lam_Software_Resume.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Software Engineer Resume
+                            </a>
+                            <a
+                                className="dropdown-item"
+                                href="/resumes/Phi_Lam_ML_Resume.pdf"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                ML Engineer Resume
+                            </a>
+                        </div>
+                    </span>.
                 </p>
-
                 {experiences.map((exp, index) => (
                     <div className="experience-card" key={index}>
                         <img
@@ -122,35 +204,23 @@ export const Experience = () => {
                                 <h5 className="company-name">{exp.company}</h5>
                                 <span className="location">{exp.location}</span>
                             </div>
-
                             {exp.roles.map((role, roleInd) => (
                                 <div key={roleInd} className="role-entry">
                                     <div className="role-header">
                                         <h6 className='role-title'>{role.position}</h6>
                                         <span className="role-date">{role.date}</span>
                                     </div>
-
-                                    <p className="role-description"> {role.description}</p>
+                                    {(!isSmallWindow || isCompanyRolesDropdown[index]) && (
+                                        <p className="role-description"> {role.description}</p>
+                                    )}
                                 </div>
                             ))}
-                            {exp.company === "UBC Formula Electric" && (
+                            {isSmallWindow && (
+                                <ArrowToggle isOpen={isCompanyRolesDropdown[index]} onClick={() => toggleCompanyDropdown(index)} />
+                            )}
+                            {exp.company === "UBC Formula Electric" && (!isSmallWindow || isCompanyRolesDropdown[index]) && (
                                 <>
-                                    <button onClick={toggleDropdown} className="dropdown-button">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 330.002 330.002"
-                                            className={`dropdown-icon ${isDropdownOpen ? "flipped" : ""}`}
-                                            width="20px"
-                                            height="20px"
-                                        >
-                                            <path
-                                                d="M324.001,209.25L173.997,96.75c-5.334-4-12.667-4-18,0L6.001,209.25c-6.627,4.971-7.971,14.373-3,21
-                                                c2.947,3.93,7.451,6.001,12.012,6.001c3.131,0,6.29-0.978,8.988-3.001L164.998,127.5l141.003,105.75c6.629,4.972,16.03,3.627,21-3
-                                                C331.972,223.623,330.628,214.221,324.001,209.25z"
-                                                fill="currentColor"
-                                            />
-                                        </svg>
-                                    </button>
+                                    <ArrowToggle isOpen={isDropdownOpen} onClick={toggleDropdown} />
                                     {isDropdownOpen && (
                                         <div className="formula-description">
                                             <p>

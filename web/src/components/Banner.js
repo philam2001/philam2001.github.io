@@ -1,14 +1,23 @@
 import React from "react"
+import './Banner.css';
+
 import { useState, useEffect } from "react"
+
 import profilePic from "../assets/img/profile.jpg"
 import flipPic from "../assets/img/me.jpeg"
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Software Engineer", "Firmware Engineer", "UBC ECE Graduate", "Web Developer", "KKG Alumni"];
+    const toRotate = [
+        "Software Engineer",
+        "Firmware Engineer",
+        "UBC Electrical and Computer Engineering Student",
+        "Formula ⚡️ SAE Student",
+        "Web Developer",
+        "KKG Alumni"];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(130 - Math.random() * 100);
+    const [delta, setDelta] = useState(100 - Math.random() * 50);
     const period = 1000;
     const [scrollOpacity, setScrollOpacity] = useState(1); // Initial opacity
     useEffect(() => {
@@ -21,8 +30,6 @@ export const Banner = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -40,7 +47,9 @@ export const Banner = () => {
         setText(updatedText)
 
         if (isDeleting) {
-            setDelta(prevDelta => 50)
+            setDelta(50)
+        } else {
+            setDelta(80);
         }
 
         if (!isDeleting && updatedText == fullText) {

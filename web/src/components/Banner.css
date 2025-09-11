@@ -1,0 +1,195 @@
+.banner {
+    position: relative;
+    margin-top: 0;
+    padding: 260px 30px 100px 30px;
+    /* background-image: url('./assets/img/stars.jpeg');
+     */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 80%, #171717),
+        url('../assets/img/stars.jpeg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.text-content,
+.image-container {
+    flex: 1;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent);
+    /* Black overlay with 50% opacity */
+    z-index: 1;
+    /* Position overlay above background */
+}
+
+.banner * {
+    position: relative;
+    z-index: 2;
+    /* Ensure text content is above the overlay */
+}
+
+.text-content {
+    text-align: left;
+    /* padding-left: 15vw; */
+}
+
+.me-text {
+    /* opacity: 0; */
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    font-size: 20px;
+    /* padding-left: 15vw; */
+}
+
+.welcome {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: fadeInRight 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+
+}
+
+
+.flip-container {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: fadeInRight 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.flip-container {
+    width: 250px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.front {
+    transform: rotateY(0deg);
+    z-index: 2;
+    /* Keep the front image above initially */
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+
+.banner h1 {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    /* margin-bottom: 20px; */
+    display: block;
+}
+
+.banner p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+}
+
+.banner img {
+    transition: transform 0.6s ease-in-out;
+    /* animation: updown 3s linear infinite; */
+}
+
+
+
+@keyframes updown {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 
+TODO: why do i need this here if it's already in global app.css */
+.profile-pic {
+    position: absolute;
+    /* Aligns both images in the same position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ensure both images fully occupy the container */
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow:
+        0 0 15px rgba(162, 207, 254, 0.5),
+        0 0 25px rgba(162, 207, 254, 0.5),
+        0 0 50px rgba(162, 207, 254, 0.5),
+        0 0 100px rgba(162, 207, 254, 0.3);
+    animation: glow 2s infinite alternate;
+    transition: transform 0.6s ease-in-out;
+}
